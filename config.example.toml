@@ -1,0 +1,17 @@
+[index]
+embed_model = "sentence-transformers/all-MiniLM-L6-v2"
+faiss_path = "index/faiss_index.bin"
+emb_path = "index/embeddings.npy"
+
+
+[retrieval]
+top_k = 5
+min_score = 0.3
+
+
+[prompt]
+template_path = "prompts/enhance_bug.md"
+
+
+[jira]
+project_key = "APP"

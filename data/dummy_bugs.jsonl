@@ -1,0 +1,93 @@
+{"summary": "Delayed stock feed from LSE", "description": "Real-time ticker feed for LSE symbols is delayed by ~5 seconds compared to Bloomberg reference. Logs indicate buffering issues in Kafka consumer.", "platform": "Linux"}
+{"summary": "NASDAQ data missing fields", "description": "Order book updates from NASDAQ are missing 'askDepth10' field intermittently. Parser throws KeyError.", "platform": "Web"}
+{"summary": "Edge node memory leak", "description": "Memory usage on edge nodes grows continuously during peak trading hours. Suspected issue in protobuf deserialization.", "platform": "Windows Server 2019"}
+{"summary": "High CPU usage in data normalizer", "description": "The normalization service spikes to 95% CPU when processing multiple exchanges simultaneously. Perf traces show hotspot in JSON parsing.", "platform": "Linux"}
+{"summary": "Trade duplication in Kafka topic", "description": "Duplicate trades detected in 'trades_lse' topic. Sequence numbers indicate replay of same data batch.", "platform": "Cloud"}
+{"summary": "Market close event not triggered", "description": "Daily market close event for Tokyo Stock Exchange not firing, leading to incomplete end-of-day summaries.", "platform": "Linux"}
+{"summary": "API rate limit exceeded", "description": "Edge API fetching NYSE quotes hits vendor-imposed rate limits and starts returning HTTP 429 errors.", "platform": "Web"}
+{"summary": "Time sync drift on edge device", "description": "NTP sync on Frankfurt edge node drifts by ~150ms causing out-of-order trades in the feed.", "platform": "Windows Server 2019"}
+{"summary": "WebSocket disconnects", "description": "Persistent WebSocket connections to CME futures feed drop randomly every 30 minutes. Reconnect logic not triggered.", "platform": "Linux"}
+{"summary": "Data corruption in Redis cache", "description": "Redis cache storing pre-market trades shows corrupted JSON blobs under high write load.", "platform": "Cloud"}
+{"summary": "Alerting not triggered", "description": "Price threshold alerts for FTSE100 not sent. Alerting service stuck waiting on Kafka partition offset.", "platform": "Linux"}
+{"summary": "Dashboard latency high", "description": "Trader dashboard takes 12 seconds to load when viewing all indices. Queries hitting PostgreSQL lack indexes.", "platform": "Web"}
+{"summary": "Edge device disk full", "description": "Local logging on edge nodes fills up disk within 6 hours due to verbose debug logs.", "platform": "Windows Server 2019"}
+{"summary": "Packet loss from data vendor", "description": "UDP multicast feed from data vendor drops ~2% of packets during peak hours. Missing sequence numbers confirm loss.", "platform": "Linux"}
+{"summary": "Latency mismatch across exchanges", "description": "Quotes from LSE arrive 200ms later than NYSE on the same edge node. Network traces show routing imbalance.", "platform": "Cloud"}
+{"summary": "TLS handshake failure", "description": "Secure connection to HKEX feed intermittently fails with 'SSL routines:ssl3_read_bytes:sslv3 alert handshake failure'.", "platform": "Linux"}
+{"summary": "Inconsistent OHLC values", "description": "OHLC aggregation service produces incorrect daily open/close for some tickers. Likely timezone misalignment.", "platform": "Web"}
+{"summary": "Dropped partitions in Kafka cluster", "description": "Two Kafka brokers dropped partitions during load test, causing data lag of 5 minutes.", "platform": "Cloud"}
+{"summary": "Edge analytics producing wrong results", "description": "Moving average calculation at edge nodes produces incorrect values during daylight savings switch.", "platform": "Linux"}
+{"summary": "Failover not triggered", "description": "Primary edge node outage did not trigger automatic failover to backup node, causing 2-minute data blackout.", "platform": "Windows Server 2019"}
+{"summary": "Incorrect timezone handling", "description": "Timestamps from Tokyo exchange feed are not converted to UTC correctly, leading to misaligned data.", "platform": "Linux"}
+{"summary": "High memory usage in Python service", "description": "Python-based data normalization service consumes excessive memory under load, leading to slowdowns.", "platform": "Linux"}
+{"summary": "Missing trade confirmations", "description": "Trade confirmation messages from LSE are missing in the Kafka topic intermittently.", "platform": "Cloud"}
+{"summary": "Edge node firmware bug", "description": "Firmware version 1.2.3 on edge nodes has a known bug causing random reboots under high CPU load.", "platform": "Windows Server 2019"}
+{"summary": "Data feed latency spikes", "description": "Latency for NASDAQ feed spikes to 1 second every 10 minutes, impacting real-time analytics.", "platform": "Linux"}
+{"summary": "Incorrect data schema", "description": "Schema changes from data vendor not reflected in our parsers, causing deserialization errors.", "platform": "Web"}
+{"summary": "Failed database migrations", "description": "Database migrations for new feature deployment failed due to syntax errors in SQL scripts.", "platform": "Cloud"}
+{"summary": "Edge node timeouts", "description": "Frequent timeouts when edge nodes connect to central processing service during peak hours.", "platform": "Linux"}
+{"summary": "Inaccurate latency metrics", "description": "Latency metrics reported in monitoring dashboard do not match actual observed latencies.", "platform": "Web"}
+{"summary": "Data duplication in PostgreSQL", "description": "Duplicate records found in PostgreSQL database for certain tickers after bulk import.", "platform": "Cloud"}
+{"summary": "Failed API authentication", "description": "API requests to third-party service fail with 401 Unauthorized errors intermittently.", "platform": "Web"}
+{"summary": "Edge node overheating", "description": "Temperature sensors on edge nodes report overheating during summer months, risking hardware damage.", "platform": "Windows Server 2019"}
+{"summary": "Incorrectly formatted JSON", "description": "Some JSON messages from the data feed are malformed, causing parsing failures.", "platform": "Linux"}
+{"summary": "High latency in WebSocket connections", "description": "WebSocket connections to real-time feed exhibit high latency during market open hours.", "platform": "Web"}
+{"summary": "Data loss during failover", "description": "Data loss observed when failing over from primary to secondary Kafka cluster.", "platform": "Cloud"}
+{"summary": "Inconsistent data across regions", "description": "Data discrepancies observed between edge nodes located in different geographic regions.", "platform": "Linux"}
+{"summary": "Unresponsive API endpoints", "description": "Certain API endpoints become unresponsive under heavy load, impacting user experience.", "platform": "Cloud"}
+{"summary": "Failed to parse XML feed", "description": "XML feed from a vendor fails to parse due to unexpected tags, causing data ingestion failures.", "platform": "Linux"}
+{"summary": "Edge node network instability", "description": "Frequent network drops on edge nodes leading to intermittent data feed interruptions.", "platform": "Windows Server 2019"}
+{"summary": "Incorrectly calculated VWAP", "description": "Volume Weighted Average Price (VWAP) calculations are incorrect due to wrong volume aggregation logic.", "platform": "Web"}
+{"summary": "Data serialization issues", "description": "Protobuf serialization errors occur when sending large messages, leading to data loss.", "platform": "Linux"}
+{"summary": "Failed log rotation", "description": "Log rotation script fails, causing log files to grow indefinitely and consume disk space.", "platform": "Cloud"}
+{"summary": "Inadequate error handling", "description": "Lack of proper error handling in data processing pipeline leads to crashes on unexpected input.", "platform": "Linux"}
+{"summary": "Slow database queries", "description": "Certain database queries take excessively long to execute, impacting overall system performance.", "platform": "Cloud"}
+{"summary": "Edge node firmware update failure", "description": "Firmware updates on edge nodes fail midway, leaving devices in an unusable state.", "platform": "Windows Server 2019"}
+{"summary": "Incorrect timezone in logs", "description": "Log timestamps are not in UTC, making it difficult to correlate events across systems.", "platform": "Linux"}
+{"summary": "High latency in data processing", "description": "Data processing pipeline experiences high latency during peak trading hours, delaying analytics.", "platform": "Cloud"}
+{"summary": "Failed to connect to external API", "description": "Intermittent failures when connecting to an external API for additional market data.", "platform": "Web"}
+{"summary": "Data feed format changes", "description": "Unexpected changes in data feed format from vendor cause parsing errors and data loss.", "platform": "Linux"}
+{"summary": "Edge node power failures", "description": "Power supply issues on edge nodes lead to unexpected shutdowns and data interruptions.", "platform": "Windows Server 2019"}
+{"summary": "Inconsistent trade volumes", "description": "Discrepancies in reported trade volumes between different data sources for the same ticker.", "platform": "Web"}
+{"summary": "Failed to archive old data", "description": "Automated archiving of old trade data fails, leading to increased storage costs.", "platform": "Cloud"}
+{"summary": "Incorrectly configured load balancer", "description": "Load balancer misconfiguration leads to uneven traffic distribution and server overloads.", "platform": "Cloud"}
+{"summary": "Edge node software crashes", "description": "Frequent crashes of edge node software under high load conditions, requiring manual restarts.", "platform": "Windows Server 2019"}
+{"summary": "Data feed latency variability", "description": "Significant variability in data feed latency observed, impacting real-time decision making.", "platform": "Linux"}
+{"summary": "Failed to send email alerts", "description": "Email alerting system fails to send notifications due to SMTP server issues.", "platform": "Cloud"}
+{"summary": "Incorrectly parsed CSV data", "description": "CSV data from a vendor is not parsed correctly due to unexpected delimiters, causing data loss.", "platform": "Linux"}
+{"summary": "Edge node firmware compatibility issues", "description": "New firmware version incompatible with existing hardware, causing boot failures.", "platform": "Windows Server 2019"}
+{"summary": "High latency in REST API responses", "description": "REST API responses take too long during peak hours, affecting user experience.", "platform": "Web"}
+{"summary": "Data feed interruptions", "description": "Frequent interruptions in data feed from a key vendor, leading to gaps in market data.", "platform": "Linux"}
+{"summary": "Failed to update database schema", "description": "Database schema updates fail due to foreign key constraints, blocking new feature deployment.", "platform": "Cloud"}
+{"summary": "Edge node temperature sensor failures", "description": "Temperature sensors on edge nodes fail, preventing monitoring of overheating issues.", "platform": "Windows Server 2019"}
+{"summary": "Inaccurate trade timestamps", "description": "Trade timestamps are inaccurate due to incorrect timezone handling, leading to misaligned data.", "platform": "Linux"}
+{"summary": "High memory consumption in Java service", "description": "Java-based microservice consumes excessive memory under load, leading to slowdowns and crashes.", "platform": "Cloud"}
+{"summary": "Failed to connect to Kafka cluster", "description": "Intermittent connectivity issues when connecting to Kafka cluster, causing message delays and potential data loss.", "platform": "Cloud"}
+{"summary": "Edge node disk I/O bottlenecks", "description": "Disk I/O bottlenecks on edge nodes during peak hours lead to data processing delays.", "platform": "Windows Server 2019"}
+{"summary": "Incorrectly formatted XML responses", "description": "XML responses from an external API are incorrectly formatted, causing parsing failures.", "platform": "Web"}
+{"summary": "Failed to replicate data across regions", "description": "Data replication between primary and secondary data centers fails intermittently, leading to inconsistencies.", "platform": "Cloud"}
+{"summary": "Edge node network latency spikes", "description": "Network latency spikes on edge nodes during peak trading hours, impacting real-time data processing.", "platform": "Linux"}
+{"summary": "Inconsistent data serialization formats", "description": "Different services use inconsistent serialization formats (JSON vs Protobuf), leading to integration issues.", "platform": "Cloud"}
+{"summary": "Failed to process bulk data imports", "description": "Bulk data import jobs fail due to timeout errors, leading to incomplete data sets.", "platform": "Linux"}
+{"summary": "Edge node firmware security vulnerabilities", "description": "Firmware on edge nodes has known security vulnerabilities that need to be patched urgently.", "platform": "Windows Server 2019"}
+{"summary": "High CPU usage in Node.js service", "description": "Node.js-based service experiences high CPU usage under load, leading to slow response times.", "platform": "Cloud"}
+{"summary": "Failed to connect to Redis cache", "description": "Intermittent connectivity issues with Redis cache lead to increased latency in data retrieval.", "platform": "Cloud"}
+{"summary": "Incorrectly calculated moving averages", "description": "Moving average calculations are incorrect due to a bug in the aggregation logic, affecting analytics accuracy.", "platform": "Web"}
+{"summary": "Data feed schema evolution issues", "description": "Schema evolution in data feed not handled properly, causing deserialization errors in consumers.", "platform": "Linux"}
+{"summary": "Edge node hardware failures", "description": "Frequent hardware failures on edge nodes lead to unexpected downtime and data interruptions.", "platform": "Windows Server 2019"}
+{"summary": "Inadequate logging for debugging", "description": "Lack of sufficient logging in critical services makes it difficult to diagnose issues quickly.", "platform": "Cloud"}
+{"summary": "Failed to send email notifications", "description": "Email notifications fail to send due to SMTP server issues, impacting user communication.", "platform": "Web"}
+{"summary": "High latency in data ingestion pipeline", "description": "Data ingestion pipeline experiences high latency during peak trading hours, delaying data availability.", "platform": "Cloud"}
+{"summary": "Failed to update edge node software", "description": "Software updates on edge nodes fail due to network issues, leaving devices outdated.", "platform": "Windows Server 2019"}
+{"summary": "Incorrectly parsed JSON data", "description": "JSON data from a vendor is not parsed correctly due to unexpected structures, causing data loss.", "platform": "Linux"}
+{"summary": "Edge node power supply issues", "description": "Power supply issues on edge nodes lead to unexpected shutdowns and data interruptions.", "platform": "Windows Server 2019"}
+{"summary": "Inconsistent trade prices", "description": "Discrepancies in reported trade prices between different data sources for the same ticker.", "platform": "Web"}
+{"summary": "Failed to archive historical data", "description": "Automated archiving of historical trade data fails, leading to increased storage costs.", "platform": "Cloud"}
+{"summary": "Incorrectly configured firewall rules", "description": "Firewall misconfiguration leads to blocked traffic and service outages.", "platform": "Cloud"}
+{"summary": "Edge node software memory leaks", "description": "Memory leaks in edge node software lead to gradual performance degradation over time.", "platform": "Windows Server 2019"}
+{"summary": "Data feed latency inconsistencies", "description": "Inconsistent latency in data feed delivery impacts real-time analytics accuracy.", "platform": "Linux"}
+{"summary": "Failed to send SMS alerts", "description": "SMS alerting system fails to send notifications due to third-party service issues.", "platform": "Cloud"}
+{"summary": "Incorrectly formatted CSV responses", "description": "CSV responses from an external API are incorrectly formatted, causing parsing failures.", "platform": "Web"}
+{"summary": "Edge node firmware rollback issues", "description": "Firmware rollback on edge nodes fails, leaving devices in an unstable state.", "platform": "Windows Server 2019"}
+{"summary": "High latency in GraphQL API responses", "description": "GraphQL API responses take too long during peak hours, affecting user experience.", "platform": "Web"}
+{"summary": "Data feed interruptions from secondary vendor", "description": "Frequent interruptions in data feed from secondary vendor lead to gaps in data availability.", "platform": "Cloud"}
