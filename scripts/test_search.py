@@ -82,10 +82,10 @@ def main():
         try:
             choice = int(input("Select issue number to view full defect: ")) - 1
             if choice < 0 or choice >= len(results):
-                print("⚠️ Invalid choice.")
+                print(" Invalid choice.")
                 continue
         except ValueError:
-            print("⚠️ Please enter a valid number.")
+            print(" Please enter a valid number.")
             continue
 
         selected = results[choice][0]
